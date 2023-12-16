@@ -1,0 +1,417 @@
+*{
+  transition: all 0.2s;
+}
+
+.new-session-status {
+  position: absolute;
+  top: 81;
+  left: 1;
+  right: 0;
+  height:55px ;
+}
+
+.new-session-sign-in-form {
+  position: absolute;
+  top: 81;
+  bottom: 71;
+  left: 2;
+  width: 65%;
+}
+
+.ns-form-header {
+  position: relative;
+}
+
+.ns-form-hearder-left {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.ns-form-hearder-left div:first-child,
+.ns-form-hearder-left div:last-child
+{
+  color: rgb(0, 0, 0);
+  padding: 2px;
+  color: rgb(0, 0, 0);
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+
+.ns-form-header p {
+  text-align: center;
+  font-size: 20px;
+  position: absolute;
+  top: -4;
+  left: 0;
+  right: 0;
+  margin-bottom: 2px;
+}
+
+.form-big-container {
+  position: absolute;
+  top: 40;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: auto;
+  padding: 8px;
+}
+
+.new-session-teens-table {
+  position: absolute;
+  top: 81;
+  bottom: 71;
+  right: 2;
+  width: 35%;
+  padding: 10px;
+
+}
+
+.new-session-teens-table::-webkit-scrollbar {
+  width: 0;
+}
+
+.teens-table {
+  position: absolute;
+  top: 200;
+  left: 0;
+  right: 0;
+  bottom: 2;
+  overflow: auto;
+  padding: 10px;
+}
+
+.teens-table table th {
+  position: sticky;
+  top: -11;
+  background-color: white;
+  color: black;
+  border: none;
+  font-size: 14px;
+  text-align: center;
+}
+
+.teens-table table {
+  border: none;
+}
+
+.teens-table tr {
+  border-bottom: 1px solid;
+}
+
+.teens-table td {
+  border: none;
+  text-align: center;
+}
+
+.teens-table::-webkit-scrollbar {
+  width: 0;
+}
+
+.refreshments-distribution {
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: none;
+
+}
+
+.hd {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 38;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+}
+
+#enableFormMessage {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.1);
+  top: 14;
+  bottom: 0;
+  z-index: 100;
+  left: 0;
+  right: 0;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#enableFormMessage div {
+  color: white;
+  font-size: 25px;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 2px;
+  border-radius: 10px;
+}
+
+.basic-info-container {
+ position: absolute;
+ top: 50;
+ left: 0;
+ right: 0;
+ padding: 5;
+}
+#sessionDateList {
+  background: transparent;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 4;
+  bottom: 4;
+  padding: 10;
+  overflow: auto;
+}
+
+#sessionDateList::-webkit-scrollbar {
+  width: 0;
+}
+.teen-id,
+.teen-date,
+.teens-today {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  height: 40;
+  align-items: center;
+  background-color: #8dc8c0;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 4px;
+}
+
+.teen-id div:last-child,
+.teen-date div:last-child,
+.teens-today div:last-child {
+  background-color: rgb(222, 222, 222);
+  padding: 5px;
+  border-radius: 8px;
+}
+
+.session-info .hd p {
+  text-align: center;
+}
+
+.refreshments-distribution table {
+  border-collapse: collapse;
+  margin-top: 15px;
+  width: 100%;
+}
+
+tbody:nth-child(even) {
+ background-color: rgb(236, 236, 236);
+}
+
+.refreshments-distribution th,
+.refreshments-distribution td {
+  border: none;
+  padding: 10px;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.refreshments-distribution-table th {
+  background:#ffffff;;
+  color: black;
+  position: sticky;
+  top: 0;
+}
+
+.refreshments-distribution-table button  {
+  border: none;
+  background: rgb(197, 78, 27);
+  font-size: 16;
+  cursor: pointer;
+  padding: 10px;
+  color: white;
+  border-radius: 5px;
+  width: 122px;
+}
+
+.refreshments-distribution-table button:hover{
+  font-weight: bold;
+}
+
+.refreshment-buttons{
+  background: green;
+}
+
+.refreshments-distribution h1 {
+  color: rgb(255, 254, 254);
+  text-align: center;
+  margin-top: 15px;
+}
+
+.refreshments-distribution-table {
+  margin-top: 15px;
+  background-color: white;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  align-items: center;
+  position: absolute;
+  left: 100;
+  right: 100;
+  bottom: 20;
+  top: 120;
+  overflow: auto;
+}
+
+
+
+.header {
+  position: relative;
+}
+
+.filters {
+position: absolute;
+left: 100;
+right: 100;
+display: flex;
+align-items: center;
+justify-content: space-between;
+top: 80;
+}
+
+.filters label {
+  color: white;
+  font-size: 20px;
+}
+
+.filters button {
+padding: 5px;
+background: transparent;
+border: none;
+color: white;
+cursor: pointer;
+font-size: 20px;
+}
+
+.filters button:hover {
+  font-weight: bolder;
+  transition: all 0.5s;
+}
+
+.filters select {
+  padding: 5px;
+  font-size: 17px;
+  background-color: rgb(218, 218, 218);
+  flex: 1;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.filters select option {
+  cursor: pointer;
+}
+
+.filters .left-part {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+@media screen and (min-width: 1600px) {
+  body {
+      font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+
+
+  .refreshments-distribution h1 {
+    font-size: 30px;
+  }  
+  
+    .refreshments-distribution-table,
+    .filters {
+      right: 200;
+      left: 200;
+    }
+
+
+}
+
+@media screen and (max-width: 1300px) {
+  .teen-search {
+    left: 100;
+    right: 100;
+  } 
+}
+
+@media screen and (max-width: 1000px) {
+  .teen-search {
+    left: 20;
+    right: 20;
+  } 
+
+  .bottom-section {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .session-date-list {
+    display: none;
+  }
+
+  .session-details {
+    right: 5;
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  .ns-form-hearder-left {
+    display: block;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+.form-big-container {
+  margin-top: 20px;
+}
+
+.refreshments-distribution h1 {
+  font-size: 20px;
+}  
+
+  .refreshments-distribution-table,
+  .filters {
+    right: 20;
+    left: 20;
+  }
+
+  .teen-search {
+    left: 20;
+    right: 20;
+  }
+
+  .new-session-sign-in-form {
+    width: 100%;
+  }
+
+  .new-session-teens-table {
+    display: none;
+  }
+
+  .bottom-section {
+    grid-template-columns: 1fr;
+  }
+
+  .session-date-list {
+    display: none;
+  }
+
+  .session-details {
+    right: 5;
+  }
+}

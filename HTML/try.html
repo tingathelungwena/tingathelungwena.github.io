@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fixed HTML Page Layout</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Top Section */
+        .top-section {
+            background-color: #3498db;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+        }
+
+        /* Middle Section */
+        .middle-section {
+            padding: 20px;
+            margin-top: 80px; /* Adjust this value to leave enough space for the top section */
+            margin-bottom: 80px; /* Adjust this value to leave enough space for the bottom section */
+            background-color: #1e0448;
+        }
+
+        /* Bottom Section */
+        .bottom-section {
+            background-color: #e74c3c;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Section -->
+    <div class="top-section">
+        <h1>Top Section</h1>
+        <p>This is the top part of the page.</p>
+    </div>
+
+    <!-- Middle Section -->
+    <div class="middle-section">
+        <h1>Middle Section</h1>
+        <p>This is the middle part of the page.</p>
+        <!-- Add your content here -->
+        <!-- This section will scroll while the top and bottom remain fixed -->
+    </div>
+
+    <!-- Bottom Section -->
+    <div class="bottom-section">
+        <h1>Bottom Section</h1>
+        <p>This is the bottom part of the page.</p>
+    </div>
+</body>
+</html>

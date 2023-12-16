@@ -1,0 +1,32 @@
+.popup-message {
+  position: fixed;
+  z-index: 1000;
+  display: none;
+  justify-content: center;
+  right: 0;
+  left: 0;
+  top: 10;
+}
+
+.popup-message .pops {
+  padding: 5px;
+  background-color: rgb(137, 93, 11);
+  padding-left: 50;
+  padding-right: 50;
+  color: white;
+  border-radius: 5px;
+  position: relative;
+}
+
+.popup-message #popBtn {
+  position: absolute;
+  padding-left: 2px;
+  padding-right: 2px;
+  top: 4;
+  right: 3;
+  color: rgb(255, 255, 255);
+  background: transparent;
+  border: none;
+  font-size: 18;
+  cursor: pointer;
+}

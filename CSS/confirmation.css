@@ -1,0 +1,78 @@
+.confirmation-message-container {
+  z-index: 200;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.confirmation-message-sub-container {
+  margin-top: -250;
+  background-color: white;
+  padding: 10px;
+  position: relative;
+  width: 300;
+  box-shadow: 1px 4px 7px 0px rgba(0,0,0,0.75);
+  border-radius: 4px;
+}
+
+.confirmation-title {
+  background-color: green;
+  color: white;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  text-align: center;
+  padding: 10px;
+  font-size: 22px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
+.confirmation-message {
+  margin-top: 50;
+  font-size: 18px;
+  text-align: center;
+}
+
+.confirmation-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.confirmation-buttons button {
+  width: 50%;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.confirmation-buttons button:first-child {
+  background-color: rgb(66, 66, 125);
+  color: white;
+}
+
+.confirmation-buttons button:first-child:hover {
+  background-color: rgb(37, 37, 93);
+  color: white;
+}
+
+.confirmation-buttons button:nth-child(2) {
+  background-color: rgb(200, 92, 19);
+  color: white;
+}
+
+.confirmation-buttons button:nth-child(2):hover {
+  background-color: rgb(156, 69, 10);
+  color: white;
+}
+

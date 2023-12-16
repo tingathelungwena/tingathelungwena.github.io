@@ -1,0 +1,114 @@
+
+@import url('https://fonts.googleapis.com/css2?family=BhuTuka+Expanded+One&family=Poppins&family=Roboto:wght@400;500;700&display=swap');
+
+:root{
+    --color-default:#004f83;
+    --color-second:#0067ac;
+    --color-white:#fff;
+    --color-body:#e4e9f7;
+    --color-light:#e0e0e0;
+}
+
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    min-height: 100vh;
+}
+
+.login-section{
+    background-color: var(--color-body);
+    width: 100%;
+    min-height: 100vh;
+    position: fixed;
+}
+
+.container{
+    background-color: var(--color-white);
+    display: inline-block;
+    margin-top: 70px;
+    width: 550px;
+    box-shadow: 3px 5px 5px 0px rgba(0,0,0,0.53);
+    border-radius: 5px;
+    height: 350px;
+}
+
+.container h3{
+    padding-top: 15px;
+    padding-bottom: 35px;
+}
+
+.login-title{
+    padding-top: 8px;
+    padding-bottom: 8px;
+    font-size: 20px;
+    background-color: var(--color-default);
+    color: var(--color-body);
+}
+
+.username, .password{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    transition:all 0.3 ease;
+}
+
+.username input, .password input{
+    width: 400px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(214, 224, 225);
+    height: 50px;
+    padding-left: 10px;
+    transition: all 03 ease;
+    font-size: 20px;
+}
+
+.password{
+    margin-top: 20px;
+}
+
+.username{
+    margin-top: 30px;
+}
+
+form h3{
+    font-size: 30px;
+    height: 70px;
+    color: #fff;
+    border-bottom: 1px solid #0f0404;
+    background-color: rgb(133, 124, 109);
+    transition: all 0.3s ease;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+form button{
+    margin-top: 30px;
+    width: 250px;
+    height: 40px;
+    border-radius: 6px;
+    border: none;
+    background-color: var(--color-second);
+    cursor: pointer;
+}
+
+form button a{
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+}
+footer{
+    background-color: black;
+    width: 100%;
+    position: relative;
+    margin-top: 130px;
+    position: fixed;
+    height: calc(100vh - 100px);
+
+    
+}

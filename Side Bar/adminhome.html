@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Side bar menu</title>
+</head>
+<body>
+    <div class="sidebar">
+            <div class="logo_details">
+                <i class="bx bxl-audible icon"></i>
+                <div class="logo_name">LGWN DMS</div>
+                <i class="bx bx-menu" id="btn"></i>
+            </div>
+
+        <ul class="nav-list">
+            <li>
+                <I class="bx bx-search"></I>
+                <input type="text" placeholder="Search...">
+                <span class="tootip">Search</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="bx bx-grid-alt"></i>
+                    <span class="link_name">Dashboard</span>
+                </a>
+                <span class="tootip">Dashboard</span>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class="bx bx-user"></i>
+                    <span class="link_name">User</span>
+                </a>
+                <span class="tootip">User</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="bx bx-chat"></i>
+                    <span class="link_name">Chat</span>
+                </a>
+                <span class="tootip">Chat</span>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class="bx bx-line-chart"></i>
+                    <span class="link_name">Analytics</span>
+                </a>
+                <span class="tootip">Analytics</span>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class="bx bx-folder"></i>
+                    <span class="link_name">File Manager</span>
+                </a>
+                <span class="tootip">file Manager</span>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class="bx bx-cart-alt"></i>
+                    <span class="link_name">Order</span>
+                </a>
+                <span class="tootip">Order</span>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class="bx bx-cog"></i>
+                    <span class="link_name">Settings</span>
+                </a>
+                <span class="tootip">Settings</span>
+            </li>
+
+            <li class="profile" id="profile">
+                <div class="profile_details">
+                    <img src="/Haroon.jpg" alt="profile image">
+                    <div class="profile-content">
+                        <div class="name">Josephy Ng'omba</div>
+                        <div class="designation">Admin</div>
+                    </div>   
+                </div>
+                   <span><i class="bx bx-log-out" id="log"></i>Logout</span>
+            </li>
+
+                
+        </ul>
+    </div>
+    
+    <section class="home-section">
+        <div class="text">Dashboard</div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>

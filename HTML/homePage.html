@@ -1,0 +1,541 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TeenClub DMS</title>
+  <link rel="stylesheet" href="/TESTING FILES/styles.css">
+  <link rel="stylesheet" href="/CSS/session.css">
+  <link rel="stylesheet" href="/CSS/index.css">
+  <link rel="stylesheet" href="/CSS/newSession.css">
+  <link rel="stylesheet" href="/CSS/setSession.css">
+  <link rel="stylesheet" href="/CSS/popupmsg.css">
+  <link rel="stylesheet" href="/CSS/confirmation.css">
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body id="body">
+
+  <script src="/Data/logData.js"></script>
+  <script src="/Data/loginStatus.js"></script>
+  <script src="/TESTING FILES/script.js"></script>
+
+  <div class="conf-msg">
+    
+  </div>
+  
+  <div class="refreshments-distribution" id="jsRefreshmentDistribution">
+      <div class="header">
+        <h1>Refreshments Distribution</h1>
+      </div>
+      <div class="filters">
+
+        <div class="left-part">
+        <label for="filter">Filter</label>
+
+        <select name="filter" id="filter">
+          <option value="" disabled selected>Select Status...</option>
+          <option value="None">None</option>
+          <option value="Recieved">Recieved</option>
+          <option value="Not Recieved">Not Recieved</option>
+        </select>
+
+        <button id="sortBtn">Sort</button>
+      </div>
+
+        <button id="js-refreshment-distribution-button">X</button>
+      </div>
+
+    <div class="refreshments-distribution-table">
+      <table id="js-refresh-table">
+          <thead>
+            <tr>
+              <th>TC Number</th>
+              <th>Full Name</th>
+              <th>Age</th>
+              <th>Sex</th>
+              <th>Reason of Attendace</th>
+              <th>Status</th>
+              <th>Reg Update</th>
+            </tr>
+        </thead>
+
+        <tbody id="refreshTableBody">
+          <tr>
+            <td>01</td>
+            <td>Josephy Ng'omba</td>
+            <td>25</td>
+            <td>Female</td>
+            <td>Support</td>
+            <td><button>Not Recieved</button></td>
+            <td><button>Done</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- a popup container for setting new session -->
+  <div class="set-session-container">
+    <div class="set-session">
+      <div class="set-session-title">
+        <div>Session Setting</div>
+      </div>
+      <div class="set-session-date">
+
+        <div>Session Date</div>
+        <select name="setSessionDate" id="setSessionDate">
+        </select>
+      </div>
+
+      <div class="set-session-isGuardianSession">
+        <div>Guardian Session?</div>
+        <input type="radio" id="setSessionYes" name="setGuardian" value="Yes">
+        <label for="setSessionYes">Yes</label>
+
+        <input type="radio" id="setSessionNo" name="setGuardian" value="No">
+        <label for="setSessionNo">No</label>
+      </div>
+      <div class="set-session-buttons">
+        <button id="setCreate">Create</button>
+        <button id="setCancel">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- popup for displaying messages -->
+
+  <!-- Side bar contents -->
+    <div id="sidsebar" class="sidebar">
+
+    </div>
+  <!--Body contents-->
+  <div class="body-content">
+
+    <div class="page-title">
+      <h1>Sessions - New</h1>
+    </div>
+
+    <div class="main-frame-container">
+      <!-- session home page container -->
+      <div class="sessions-home-page" id="sessionHomePage">
+        <!--Session detailes-->
+        <div class="session-details">
+
+          <!--Showing teens attended and newly enrolled on teen club-->
+          <div class="top-section">
+              <div class="left-section">
+
+                <div style="display: flex; gap: 5px;">
+                  <div>Teens Attended:</div>
+                  <div id="shTeensAttended" class="total-teens">
+                    
+                  </div>
+                </div>
+
+                <div style="display: flex; gap: 5px;">
+                  <div>Newly Enrolled:</div>
+                  <div id="shNewlyEnrolled"   class="new-on-teen-club">
+                  </div>
+                </div>
+              </div>
+
+              <div id="shGuardianSession" class="new-on-teen-club">
+                  Guardian Session: Yes (25)
+              </div>
+          </div>
+
+          <!--showing other sections at the botton of the top section-->
+          <div class="bottom-section">
+            
+            <div class="mode-of-contact">
+                <div class="bottom-top-section">
+                    Mode of Contact
+                </div>
+
+                <div class="bottom-data">
+                    <!--to be contacted by phone call-->
+                    <div class="bottom-data-labels">
+                      <div class="text-label">
+                        <div>Phone</div>
+                      </div>
+                      <div id="mcPhone" class="value-label">
+                        0
+                      </div>
+                    </div>
+
+                    <!--to be contacted by text message-->
+                    <div class="bottom-data-labels">
+                      <div class="text-label">
+                        Text
+                      </div>
+                      <div id="mcText" class="value-label">
+                        0
+                      </div>
+                    </div>
+
+                    <!--to be contacted via WhatsApp messaging-->
+                    <div class="bottom-data-labels">
+                      <div class="text-label">
+                        WhatsApp
+                      </div>
+                      <div id="mcWhatsapp" class="value-label">
+                        0
+                      </div>
+                    </div>
+
+                    <!-- to be contacted by home visit -->
+                    <div class="bottom-data-labels">
+                      <div class="text-label">
+                        Home
+                      </div>
+                      <div id="mcHome" class="value-label">
+                        0
+                      </div>
+                    </div>
+
+                    <!-- never to be contacted -->
+                    <div class="bottom-data-labels">
+                      <div class="text-label">
+                        None
+                      </div>
+                      <div id="mcNone" class="value-label">
+                        0
+                      </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="reason-of-attendance">
+              <div class="bottom-top-section">
+                  Reason of Attendance   
+              </div>
+              <div class="bottom-data">
+                <!--to be contacted by phone call-->
+                <div class="bottom-data-labels">
+                  <div class="text-label">
+                    <div>Support</div>
+                  </div>
+                  <div id="roaSupport" class="value-label">
+                    0
+                  </div>
+                </div>
+              </div>  
+
+                <!--to be contacted by text message-->
+                <div class="bottom-data-labels">
+                  <div class="text-label">
+                    Clinic
+                  </div>
+                  <div id="roaClinic" class="value-label">
+                    0
+                  </div>
+                </div>
+            </div>
+
+            <div class="sex-and-age-dissagregated">
+              <div class="bottom-top-section">
+                  Age & Sex Dissagregation
+              </div>
+
+              <div class="bottom-data">
+                <!--to be contacted by phone call-->
+                <div class="bottom-data-labels">
+                  <div class="text-label">
+                    <div>Male(10 - 14 Yrs)</div>
+                  </div>
+                  <div id="asMale1014" class="value-label">
+                    0
+                  </div>
+                </div>
+
+                <!--to be contacted by text message-->
+                <div class="bottom-data-labels">
+                  <div class="text-label">
+                    Female(10 - 14 Yrs)
+                  </div>
+                  <div id="asFemale1014" class="value-label">
+                    0
+                  </div>
+                </div>
+
+                <!--to be contacted via WhatsApp messaging-->
+                <div class="bottom-data-labels">
+                  <div class="text-label">
+                    Male(15 - 18 Yrs)
+                  </div>
+                  <div id="asMale1518" class="value-label">
+                    0
+                  </div>
+                </div>
+
+                <!-- to be contacted by home visit -->
+                <div class="bottom-data-labels">
+                  <div class="text-label">
+                    Female(15 - 18 Yrs)
+                  </div>
+                  <div id="asFemale1518" class="value-label">
+                    0
+                  </div>
+                </div>
+
+                <!-- never to be contacted -->
+                <div class="bottom-data-labels">
+                  <div class="text-label">
+                    Male(19+ Yrs)
+                  </div>
+                  <div id="asMale19+" class="value-label">
+                    0
+                  </div>
+                </div>
+
+                  <!-- never to be contacted -->
+                <div class="bottom-data-labels">
+                  <div class="text-label">
+                    Female(19+ Yrs)
+                  </div>
+                  <div id="asFemale19+" class="value-label">
+                    0
+                  </div>
+                </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+
+        <!--Session date list-->
+        <div class="session-date-list">
+          <div class="total-buttons">
+            <h4 style="font-weight: lighter; text-align: center; width: 100%;" id="totalSessions">3 Sessons</h4>
+            <h1 id="idStoreOnBtnClick"></h1>
+            </div>
+
+            <div class="buttons" id="sessionDateList">
+            </div>
+        </div>
+
+          <!--Page buttons-->
+        <div class="page-buttons">
+            <div class="left-buttons">
+              <button class="new-session-button">New Session</button>
+              <button class="delete-session-button">Delete Session</button>
+              <button class="open-session-button">Open Session</button>
+          </div>
+          <button class="logout-button js-logout">Logout</button>
+        </div>
+      </div>
+
+      <div class="new-session-cont" id="newSessionContainer" style="display: none; transition: all 0.5s;">
+        <!-- new session top bar to display search and other info -->
+        <div class="teen-search">
+          <select id="ns-searchBy">
+            <option value="TC Number">TC Number</option>
+            <option value="ART Number">ART Number</option>
+          </select>
+          <input id="ns-SearchInput" type="number" placeholder="Search" required>
+          <button id="ns-SearchBtn">Search</button>
+        </div> 
+
+        <div class="new-session-sign-in-form">
+          <div class="ns-form-header">
+            <div class="ns-form-hearder-left">
+              <div id="nsTeenClubNumber"></div>
+              <div id="nsArtNumber"></div>
+            </div>
+            <p>Sign-in Form</p>
+          </div>
+          
+          <div id="enableFormMessage">
+            <div>Search teen to enable form</div>
+          </div>
+          <div class="form-big-container">
+            <div class="form-container">
+
+              <form action="get" id="signInForm">
+                  <div class="full-name">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Full Name" required>
+                  </div>
+
+                  <!-- gender information -->
+                  <div class="gender">
+                    <p style="margin-bottom: 5px;">Gender</p>
+                    <input type="radio" value="Male" name="gender" id="male" required>
+                    <label for="male">Male</label>
+
+                    <input type="radio" value="Female" name="gender" id="female" required>
+                    <label for="female">Female</label>
+                  </div>
+
+                  <div class="full-name">
+                    <label for="age">Age</label>
+                    <input type="number" id="age" name="age" placeholder="Teen Age" required>
+                  </div>
+
+                  <!-- locator information -->
+                  <div class="locator">
+                    <label for="locator">Locator</label>
+                    <input type="locator" id="locator" name="locator" placeholder="Locator Information" required>
+                  </div>
+
+                  <!-- phone number information -->
+                  <div class="phone-number">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
+                  </div>
+
+                  <!-- mode of support information -->
+                  <div class="mode-of-support" id="modeOfSupport">
+                    <p>Mode of support (Choose all that apply)</p>
+                    <div>
+                      <input type="checkbox" value="Phone" id="ck-phone">
+                      <label for="ck-phone">Phone</label>
+                    </div>
+
+                    <div>
+                      <input type="checkbox" value="Text" id="ck-text">
+                      <label for="ck-text">Text</label>
+                    </div>
+
+                    <div>
+                      <input type="checkbox" value="Whatsapp" id="ck-whatsapp">
+                      <label for="ck-whatsapp">WhatsApp</label>
+                    </div>
+
+                    <div>
+                      <input type="checkbox" value="Home" id="ck-home">
+                      <label for="ck-home">Home</label>
+                    </div>
+
+                    <div>
+                      <input type="checkbox" value="None" id="ck-none">
+                      <label for="ck-none">None</label>
+                    </div>
+                  </div>
+
+                  <!-- new teen information -->
+                  <div class="new-teen">
+                    <p>New in Teen Club?</p>
+
+                    <input type="radio" value="Yes" id="yes" name="newTeen" required>
+                    <label for="yes">Yes</label>
+
+                    <input type="radio" value="No" id="no" name="newTeen" required>
+                    <label for="no">No</label>
+                  </div>
+
+                  <!-- reason of attendance information -->
+                  <div class="reason-for-attendance">
+                    <p>Reson of Attendance</p>
+
+                    <input type="radio" name="reason-of-att" id="support" value="Support" required>
+                    <label for="support">Support</label>
+
+                    <input type="radio" name="reason-of-att" id="clinic" value="Clinic" required>
+                    <label for="clinic">Clinic</label>
+                  </div>
+
+                  <div class="form-buttons">
+                    <input type="submit">
+                    <input type="reset">
+                  </div>
+
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="new-session-teens-table">
+          <div class="session-info">
+            <div class="hd">
+              <p>Session Information</p>
+            </div>
+
+            <div class="basic-info-container">
+              <div class="basic-info">
+                <div class="teen-id">
+                  <div>Session ID</div>
+                  <div id="sessionIDValue">1</div>
+              </div>
+
+                <div class="teen-date">
+                    <div>TeenClub Date</div>
+                    <div id="teenClubDate">04/07/2023</div>
+                </div>
+
+                <div class="teens-today">
+                  <div>Total Teens</div>
+                  <div id="teensToday">0</div>
+              </div>
+            </div>
+
+            </div>
+          </div>
+          <div class="teens-table">
+            <table id="myTable" style="width: 100%;border-collapse: collapse;">
+              <!-- header -->
+              <thead id="nsThead">
+                <tr>
+                  <th>#</th>
+                  <th>TC #</th>
+                  <th>Full Name</th>
+                  <th>Age</th>
+                  <th>Sex</th>
+                  <th>ROA</th>
+                  <th>Action</th>
+                </tr>
+              </thead> 
+
+              <!-- data -->
+              <tbody id="nsTbody">
+                
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+          <!-- Page buttons for New session -->
+          <div class="page-buttons">
+            <div class="left-buttons">
+          <!--     <button class="new-session-button">New Session</button>
+  
+              <button class="open-session-button">Open Session</button> -->
+              <button class="Refreshments-distribution-button" id="RefreshOpenBtn">Refreshments Distribution</button>
+              <button class="delete-session-button" id="refreshFinishBtn">Finish</button>
+          </div>
+          <button class="logout-button js-logout">Logout</button>
+          </div>
+      </div>    
+  </div>
+  </div>
+  <audio src="/Sounds/mixkit-elevator-tone-2863.wav" id="notificationAudio" preload="auto" style="display: none;">
+  </audio>
+  <!--Confirmation message box-->
+  <div class="confirmation js-confirmation">
+    <div class="conf-container">
+      <div class="conf-title js-conf-title">
+      </div>
+      <div class="conf-message js-conf-message">
+      </div>
+
+      <button class="conf-yes js-yes">
+        Yes
+      </button>
+
+      <button class="conf-no js-no">
+        No
+      </button>
+    </div>
+  </div>
+
+  <script src="/Data/data2.js"></script>
+  <script src="/Data/data.js"></script>
+  <script src="/SCRIPTS/Logout.js"></script>
+  <script src="/SCRIPTS/filter.js"></script>
+  <script src="/Data/popMessage.js"></script>
+  <script src="/SCRIPTS/new-session.js"></script>
+  <script src="/SCRIPTS/signInSubmit.js"></script>
+  <script src="/SCRIPTS/sessionHome.js"></script>
+</body>
+</html>

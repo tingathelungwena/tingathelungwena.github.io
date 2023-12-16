@@ -1,0 +1,401 @@
+.table-and-sign-in-container::-webkit-scrollbar {
+  width: 0;
+}
+.page-title {
+  background-color: rgb(224, 224, 238);
+  position: absolute;
+  height: 80px;
+  right: 0;
+  left: 0;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 1px 4px 7px 0px rgba(0,0,0,0.75);
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+
+.page-title h3 {
+  padding-right: 20px;
+}
+
+.page-buttons {
+  background-color: black;
+  position: absolute;
+  height: 70px;
+  right: 0;
+  left: 0;
+  bottom: 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+  overflow: auto;
+}
+
+.new-session-button {
+  margin-left: 5px;
+  background-color: rgb(7, 163, 7);
+  color: white;
+}
+
+.delete-session-button {
+  background-color: rgb(163, 7, 7);
+  color: white;
+}
+
+.left-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.new-session-button,
+.delete-session-button,
+.open-session-button,
+.refreshments-distribution-button {
+  padding: 20px;
+  width: 200px;
+  cursor: pointer;
+  border-radius: 5px;
+  border: none;
+  font-size: 20px;
+}
+
+.refreshments-distribution-button {
+  width: 300px;
+  background-color: rgb(13, 13, 230);
+  color: white;
+}
+
+.open-session-button {
+  background-color: rgb(177, 116, 12);
+  color: white;
+}
+
+.logout-button {
+  padding: 20px;
+  width: 100px;
+  cursor: pointer;
+  border-radius: 5px;
+  border: none;
+  font-size: 20px;
+}
+
+.session-date-list {
+  position: absolute;
+  background-color: rgb(219, 212, 212);
+  top: 85px;
+  bottom: 75px;
+  right: 5px;
+  width: 250px;
+  padding:10px;
+  border-radius: 5px;
+  box-shadow: 1px 4px 7px 0px rgba(0,0,0,0.75);
+
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 65px;
+  overflow: auto;
+}
+
+.buttons button {
+  padding: 25px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+}
+
+.total-buttons {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  background-color: rgb(7, 7, 131);
+  height: 65px;
+  color: white;
+  border-radius: 5px 5px;
+}
+
+.session-details {
+  position: absolute;
+  background-color: rgb(238, 235, 231);
+  left: 5;
+  right: 0;
+  right: 260;
+  top: 85;
+  bottom: 75;
+  box-shadow: 1px 4px 7px 0px rgba(0,0,0,0.75);
+  border-radius: 5px;
+  overflow: auto;
+}
+
+.top-section {
+  position: absolute;
+  left: 0;
+  right: 0;
+  display: flex;
+  padding: 15px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(204, 215, 225);
+  height: 80px;
+}
+
+.left-section {
+  display: flex;
+  gap: 40px;
+}
+
+.left-section div,
+.new-on-teen-club {
+  font-size: 18px;
+  color: black;
+}
+
+.bottom-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 8px;
+  gap: 8px;
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  top: 80;
+}
+
+.bottom-section .mode-of-contact,
+.reason-of-attendance,
+.sex-and-age-dissagregated
+ {
+  background-color: rgb(247, 243, 243);
+  border-radius: 5px;
+  box-shadow: 1px 4px 7px 0px rgba(0,0,0,0.75);
+}
+
+.bottom-top-section {
+  background-color: white;
+  padding: 18px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.bottom-data-labels {
+  background-color: rgb(247, 243, 243);
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  height: 60px;
+  margin-top: 10px;
+  margin-left: 15px;
+  margin-right: 15px;
+  align-items: center;
+  /* box-shadow: 1px 4px 7px 0px rgba(0,0,0,0.75); */
+  border-radius: 8px;
+  gap: 25px;
+  border-bottom: 1px solid;
+}
+
+.bottom-data-labels {
+  padding: 10px;
+  display: flex;
+  flex-direction: 10px;
+  font-size: 20;
+}
+
+.bottom-data-labels .value-label {
+  padding: 5px;
+  background-color: rgb(203, 203, 203);
+  border-radius: 30%;
+}
+
+.sessions-home-page {
+   display: block;
+}
+
+.table-and-sign-in-container {
+  position: absolute;
+  overflow: auto;
+  top: 80;
+  bottom: 70;
+  right: 0;
+  left: 0;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  padding: 5px;
+  column-gap: 5px;
+}
+
+.sign-in-form {
+  display: inline-block;
+  padding: 10px;
+}
+
+.fullName,
+.locator,
+.phone-number {
+  display: block;
+}
+
+#signInForm {
+  width: 100%;
+  margin: 0 auto;
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 1px 4px 7px 0px rgba(0,0,0,0.75);
+  min-width: 250px;
+  overflow: auto;
+}
+
+#signInForm h3 {
+  margin-bottom: 20px;
+  font-size: 25px;
+}
+
+#signInForm label:nth-child(1),
+#signInForm p {
+  font-weight: bold;
+}
+
+#signInForm #name,
+#signInForm #locator,
+#signInForm #phone,
+#signInForm #age {
+  width: 100%;
+  padding: 18px 6px;
+  border: none;
+  background-color: rgb(228, 228, 228);
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+#signInForm #name::placeholder,
+#signInForm #locator::placeholder,
+#signInForm #phone::placeholder{
+  font-size: 17px;
+}
+
+.full-name, .gender, .locator,  .phone-number, .mode-of-support,
+.new-teen, .reason-for-attendance  {
+  margin-bottom: 11px;
+  font-size: 20px;
+}
+
+.gender input {
+  margin-left: 15px;
+}
+
+.mode-of-support div, 
+.new-teen input, 
+.reason-for-attendance input {
+  margin-left: 15px;
+  margin-bottom: 5px;
+}
+
+.form-buttons input {
+  width: 50%;
+  padding: 12px;
+  cursor: pointer;
+  font-size: 20px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+.form-buttons input:first-child {
+background-color: forestgreen;
+}
+
+.form-buttons input:last-child {
+  background-color: rgb(153, 102, 26);
+  }
+
+.form-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.teen-search {
+  gap: 10px;
+  position: absolute;
+  left: 300;
+  display: flex;
+  top: 38;
+  right: 300;
+}
+
+.teen-search select {
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(210, 207, 207);
+}
+
+
+.teen-search input {
+  padding: 6px;
+  padding-left: 15px;
+  border-radius: 50px;
+  border: none;
+  font-size: 20px;
+  width: 100%;
+  min-width: 100px;
+  background-color: rgb(210, 207, 207);
+
+}
+
+.teen-search input::placeholder {
+  font-size: 17px;
+}
+
+.teen-search input::selection {
+  border: none;
+}
+
+.teen-search button {
+  border-radius: 8px;
+  padding: 5px;
+  border: none;
+  cursor: pointer;
+  color: white;
+  background-color: rgb(7, 153, 7);
+}
+
+th, td {
+  border: 1px solid;
+  padding: 5px;
+  text-align: left;
+}
+
+table {
+  border-spacing: 10px;
+
+  
+}
+
+tr:nth-child(even) {
+  background-color: #fff;
+}
+
+th {
+  background-color: rgb(20, 20, 120);
+  color: white;
+}
+
+.new-session-sign-in-form {
+  padding: 10px;
+}
+
+.new-session-sign-in-form::-webkit-scrollbar {
+  width: 0;
+}

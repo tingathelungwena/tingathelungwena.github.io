@@ -1,0 +1,227 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(255, 255, 255);
+  
+}
+
+.top {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 73px;
+  box-shadow: 1px 4px 7px 0px rgba(0,0,0,0.75);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.middle {
+  background-color: rgb(255, 255, 255);
+  position: fixed;
+  top: 102px;
+  bottom: 62px;
+  left: 0;
+  right: 0;
+  box-shadow: 1px 4px 7px 0px rgba(0,0,0,0.75);
+  overflow: auto;
+}
+
+.bottom {
+  background-color: rgb(0, 0, 0);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  display: inline;
+  padding: 7px;
+}
+
+.bottom h3 {
+  color: white;
+  font-size:12px ;
+  text-align: center;
+}
+
+.bottom button {
+  padding: 14px;
+  margin-left: 1;  
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  color: white;
+  font-size: 16px;
+}
+.bottom button:first-child:hover {
+  background-color: rgb(161, 50, 50);
+}
+
+.bottom button:first-child {
+  background-color: rgb(189, 72, 72);
+  width: 100px;
+}
+
+.bottom button:last-child {
+  background-color: rgb(83, 53, 203);
+  width: 200px;
+  margin-left: 10px;
+}
+
+.bottom button:last-child:hover {
+  background-color: rgb(53, 39, 162);
+}
+.bottom button:last-child:active,
+.bottom button:first-child:active {
+  background-color: rgb(52, 52, 61);
+}
+
+.confirmation {
+  background-color: rgba(11,11,11,0.5);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  align-content: center;
+  display: none;
+}
+
+.conf-container {
+  background-color: rgb(255, 253, 248);
+  width: 500;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: -1px 6px 8px 0px rgba(0,0,0,0.5);
+  height: 300px;
+  border-radius: 10px;
+  
+}
+
+.conf-title {
+  background-color: wheat;
+  padding: 20px;
+  font-size: 20px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.conf-message {
+  font-size: 20;
+  margin-top: 60;
+}
+
+.conf-yes, .conf-no {
+  position: fixed;
+  bottom: 10;
+  padding: 20;
+  width: 200px;
+  border: solid;
+  border-width: 0;
+  font-size: 20;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.conf-yes {
+  left: 15;
+  background-color: green;
+
+}
+
+.conf-no {
+  right: 15;
+  background-color: darkred;
+}
+
+.conf-yes:hover {
+  left: 15;
+  background-color: rgb(2, 99, 2);
+  
+}
+
+.conf-no:hover {
+  right: 15;
+  background-color: rgb(118, 1, 1);
+}
+
+.conf-yes:active {
+  left: 15;
+  background-color: rgb(43, 47, 43);
+  
+}
+
+.conf-no:active {
+  right: 15;
+  background-color: rgb(49, 44, 44);
+}
+
+/* Styling login form */
+#loginForm {
+  margin-top: 20px;
+  display: block;
+  padding: 10px;
+  margin-left: 30%;
+  margin-right: 30%;
+}
+
+#loginForm input {
+  width: 100%;
+  padding: 20px 5px;
+  font-size: 20px;
+  border: none;
+  background-color: rgb(236, 226, 226);
+  border-radius: 5px;
+}
+
+#loginForm h2 {
+  text-align: center;
+  padding: 15px;
+  font-size: 40px;
+  background-color: rgb(242, 239, 245);
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+
+.sss {
+  margin-bottom: 15px;
+}
+
+.validation {
+  display: none;
+  color: red;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#loginForm button {
+  background-color: green;
+  width: 100%;
+  padding: 15px;
+  color: white;
+  font-size: 35px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+#loginForm button:hover {
+  background-color: rgb(2, 103, 2);
+}
+
+#loginForm button:active {
+  background-color: rgb(33, 40, 33);
+}

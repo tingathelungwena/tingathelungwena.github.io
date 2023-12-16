@@ -1,0 +1,119 @@
+.set-session-container {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  display: none;
+}
+
+.set-session {
+  background-color: white;
+  position: absolute;
+  width: 500;
+  top: 100;
+  display: inline-block;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.set-session-title {
+  background-color: green;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.set-session-title div {
+  font-size: 25px;
+  color: white;
+}
+
+.set-session-date {
+  margin-top: 55px;
+}
+
+.set-session-date div {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.set-session-date select {
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+  border-radius: 5px;
+}
+
+.set-session-isGuardianSession {
+  margin-top: 10;
+}
+
+.set-session-isGuardianSession div {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.set-session-isGuardianSession input {
+  font-size: 18px;
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
+.set-session-isGuardianSession input:first-child {
+  margin-left: -10px;
+} 
+
+.set-session-buttons {
+  margin-top: 30;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.set-session-buttons button {
+  padding: 10px;
+  width: 50%;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 15;
+}
+
+.set-session-buttons button:first-child {
+  background-color: green;
+}
+
+.set-session-buttons button:first-child:hover {
+  background-color: rgb(0, 104, 0);
+}
+
+.set-session-buttons button:first-child:active{
+  background-color: rgb(35, 37, 35);
+}
+
+.set-session-buttons button:last-child {
+  background-color: rgb(199, 5, 5);
+}
+
+.set-session-buttons button:last-child:hover {
+  background-color: rgb(157, 3, 3);
+}
+
+.set-session-buttons button:last-child:active {
+  background-color: rgb(36, 33, 33);
+}

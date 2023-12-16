@@ -1,0 +1,192 @@
+
+
+:root{
+  --color-default:#004f83;
+  --color-second:#0067ac;
+  --color-white:#fff;
+  --color-body:#e4e9f7;
+  --color-light:#e0e0e0;
+  --width-afterClose:50px;
+  --width-beforeClose:200px;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+.sidebar {
+  width: var(--width-afterClose);
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  transition: all 0.4s;
+  background-color: var(--color-default);
+}
+
+
+.body-content {
+  position: fixed;
+  background-color: rgb(240, 244, 244);
+  width: calc(100vw - var(--width-afterClose));
+  right: 0;
+  top: 0;
+  transition: all 0.4s;
+  bottom: 0;
+  overflow-y: hidden;
+}
+
+.sidebar button {
+  position: absolute;
+  top: 1;
+  right: 1;
+  text-align: center;
+  cursor: pointer;
+  transition: all .5s ease;
+}
+.sidebar .nav-list{
+    padding: 0;
+    position: absolute;
+    margin-top: 45px;
+    height: 100%;
+    width: 100%;
+}
+
+.sidebar li{
+    position: relative;
+    margin:8px 15;
+    list-style: none;
+    left: 0;
+    padding-left: ;
+}
+
+.sidebar li a{
+  display: flex;
+  min-height: 7%;
+  width: 100%;
+  align-items: center;
+  text-decoration: none;
+  background-color: var(--color-default);
+  position: relative;
+  transition: all 4s ease;
+  z-index: 12;
+}
+
+.sidebar .logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  vertical-align: middle;
+  font-size: 14px;
+  width: 40px;
+  height: 40px;
+  opacity: 1;
+  background-color: var(--color-light);
+  margin-top: 20px;
+  margin-left: 4px;
+  border-radius: 50%;
+}
+
+.sidebar .logo .hh {
+  margin-top: 8px;
+}
+
+.logoTitle {
+  display: flex;
+  align-items: center;
+  transition: all 0.5s ease;
+}
+
+.logoTitle h4 {
+  display: flex;
+  align-items: center;
+  color: var(--color-white);
+  font-size: 22px;
+  margin-left: 10px;
+  margin-top: 17px;
+  display: none;
+  transition: all 0.5s ease;
+}
+
+.js-close-button {
+  background:transparent;
+  color: var(--color-light);
+  border: none;
+}
+
+.sidebar li a::after{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: scaleX(0);
+  background-color: var(--color-white);
+  border-radius: 3px;
+  transition: transform 0.3s ease-in-out;
+  transform-origin: bottom;
+  z-index: -2;
+} 
+
+.sidebar li a:hover::after{
+  transform: scaleX(1);
+  color: var(--color-default);
+}
+
+.sidebar li a .link-name {
+  color: var(--color-white);
+  font-size: 15px;
+  padding: 5px;
+  font-weight: 400;
+  white-space: nowrap;
+  pointer-events: auto;
+  transition: all 0.4s ease;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.sidebar li a:hover .link-name{
+    transition: all 0.5s ease;
+    color: var(--color-default);
+}
+
+.sidebar.open li a .link-name{
+  opacity: 1;
+  pointer-events: auto;
+}
+
+header {
+  background-color: rgb(65, 55, 2);
+  height: 40px;
+}
+
+footer {
+  position: fixed;
+  background-color: rgb(65, 55, 2);
+  height: 10px;
+  width: 100%;
+  bottom: 0;
+}
+
+header h1 {
+  color: rgb(201, 196, 196);
+  text-align: center;
+}
+
+
+/* below code gets executed when show colose button is clicked */
+
+.sidebar.open {
+  width: var(--width-beforeClose);
+  transition: all 0.4s ease;
+}
+
+.sidebar.open ~ .body-content {
+  width: calc(100vw - var(--width-beforeClose));
+  transition: all 0.4s ease; 
+}
+
+.sidebar.open .logoTitle h4 {
+transition: all 0.4s ease;
+display: flex; 
+}
